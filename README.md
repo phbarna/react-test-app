@@ -1,3 +1,6 @@
+# I ran 'nvm install stable' to get a later version of node/npm
+# -- also I did 'nvm alias default 19.4.0 (to persist it on reboot) 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

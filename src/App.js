@@ -3,12 +3,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Various from "./pages/Various";
-import Contact from "./pages/Javascript";
 import Count from "./pages/Count";
 import NoPage from "./pages/NoPage";
 import AutoCount from "./pages/AutoCount";
 import TodosParent from "./pages/Todos";
 import Javasript from "./pages/Javascript";
+import Ref from "./pages/Ref";
 
 export default function App() {
   return (
@@ -21,6 +21,7 @@ export default function App() {
           <Route path="count" element={<Count />} />
           <Route path="*" element={<NoPage />} />
           <Route path="autocount" element={<AutoCount />} />
+          <Route path="ref" element={<Ref />} />
           <Route path="todos" element={<TodosParent />} />
         </Route>
       </Routes>

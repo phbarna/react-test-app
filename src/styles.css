@@ -47,3 +47,17 @@ ul {
   background-color: yellow;
 }
 
+.FancyBorder {
+  padding: 1px 1px;
+  border: 1px solid;
+  border-color: red;
+}
+
+.FancyBorder-blue {
+  border-color: blue;
+}
+
+.FancyBorder-red {
+  border-color: red;
+}
+

@@ -4,9 +4,6 @@ import Header from './header'
 
 import { Outlet, Link } from "react-router-dom";
 
-
-
-
 const Layout = () => {
 
     return (
@@ -30,6 +27,9 @@ const Layout = () => {
                         </li>
                         <li>
                             <Link to="/autocount">AutoCount</Link>
+                        </li>
+                        <li>
+                            <Link to="/ref">Ref</Link>
                         </li>
                         <li>
                             <Link to="/todos">Todos(callback)</Link>
