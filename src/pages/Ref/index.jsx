@@ -1,23 +1,13 @@
-import { useState, useEffect, useRef } from "react";
-import ReactDOM from "react-dom/client";
+import FRParentInput from './FRParentInput'
 
-export default function Ref() {
-  const [inputValue, setInputValue] = useState("");
-  const count = useRef(0);
-
-  useEffect(() => {
-    console.log("Ref - use effect")
-    count.current = count.current + 1;
-  });
+const Ref = () => {
 
   return (
     <>
-      <input
-        type="text"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
-      <h1>Render Count: {count.current}</h1>
+      this component uses useRef and forward ref
+      <FRParentInput />
     </>
   );
 }
+
+export default Ref;
