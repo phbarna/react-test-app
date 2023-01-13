@@ -9,6 +9,7 @@ import AutoCount from "./pages/AutoCount";
 import TodosParent from "./pages/Todos";
 import Javasript from "./pages/Javascript";
 import Ref from "./pages/Ref";
+import Reducer from './pages/Reducer'
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="*" element={<NoPage />} />
           <Route path="autocount" element={<AutoCount />} />
           <Route path="ref" element={<Ref />} />
+          <Route path="reducer" element={<Reducer />} />
           <Route path="todos" element={<TodosParent />} />
         </Route>
       </Routes>

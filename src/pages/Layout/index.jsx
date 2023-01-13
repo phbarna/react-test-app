@@ -32,6 +32,9 @@ const Layout = () => {
                             <Link to="/ref">Ref</Link>
                         </li>
                         <li>
+                            <Link to="/reducer">Reducer</Link>
+                        </li>
+                        <li>
                             <Link to="/todos">Todos(callback)</Link>
                         </li>
                     </ul>
