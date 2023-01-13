@@ -1,5 +1,5 @@
 # I ran 'nvm install stable' to get a later version of node/npm
-# -- also I did 'nvm alias default 19.4.0 (to persist it on reboot) 
+# -- also I did 'nvm alias default 19.4.0 (to persist node version on a shell) 
 
 # Getting Started with Create React App
 
