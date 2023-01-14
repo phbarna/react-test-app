@@ -1,5 +1,3 @@
-
-import { useEffect } from "react";
 import Header from './header'
 
 import { Outlet, Link } from "react-router-dom";
@@ -33,6 +31,9 @@ const Layout = () => {
                         </li>
                         <li>
                             <Link to="/reducer">Reducer</Link>
+                        </li>
+                        <li>
+                            <Link to="/contexttest">ContextTest</Link>
                         </li>
                         <li>
                             <Link to="/todos">Todos(callback)</Link>

@@ -10,6 +10,7 @@ import TodosParent from "./pages/Todos";
 import Javasript from "./pages/Javascript";
 import Ref from "./pages/Ref";
 import Reducer from './pages/Reducer'
+import ContextTest from './pages/ContextTest'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="*" element={<NoPage />} />
           <Route path="autocount" element={<AutoCount />} />
           <Route path="ref" element={<Ref />} />
+          <Route path="contexttest" element={<ContextTest />} />
           <Route path="reducer" element={<Reducer />} />
           <Route path="todos" element={<TodosParent />} />
         </Route>
