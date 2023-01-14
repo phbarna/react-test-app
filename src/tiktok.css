@@ -1,12 +1,23 @@
-body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
+  
+
+
+  li.tiktok {
+  
+    padding: 0px;
+  
+    display: block;
   }
   
-  ol, ul {
-    padding-left: 30px;
+  ul.tiktok, ol.tiktok {
+    display: block;
+  
   }
   
+.tiktok {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 10px;
+}
+
   .board-row:after {
     clear: both;
     content: "";

@@ -1,5 +1,4 @@
 export default function Various() {
-
   function Car(props) {
     return <p>I am a {props.brand}</p>;
   }

@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function AutoCount() {
     const [count, setCount] = useState(0);
-
-    const [test, setTest] = useState(0);
-  
+ 
     useEffect(() => {
       console.log("use effect in autocount")
       setTimeout(() => {
