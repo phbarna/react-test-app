@@ -38,6 +38,9 @@ const Layout = () => {
                         <li>
                             <Link to="/todos">Todos(callback)</Link>
                         </li>
+                        <li>
+                            <Link to="/tiktok">TickTok</Link>
+                        </li>
                     </ul>
                 </nav>
 

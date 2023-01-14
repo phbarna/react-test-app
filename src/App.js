@@ -11,6 +11,7 @@ import Javasript from "./pages/Javascript";
 import Ref from "./pages/Ref";
 import Reducer from './pages/Reducer'
 import ContextTest from './pages/ContextTest'
+import TikTok from './pages/TikTok'
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="contexttest" element={<ContextTest />} />
           <Route path="reducer" element={<Reducer />} />
           <Route path="todos" element={<TodosParent />} />
+          <Route path="tiktok" element={<TikTok />} />
         </Route>
       </Routes>
     </BrowserRouter>
