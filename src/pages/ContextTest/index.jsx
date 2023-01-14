@@ -4,11 +4,11 @@ import Child from './Child';
 export const UserContext = createContext();
 
 export default function ContextTest() {
-  const [user, setUser] = useState("Pete");
+  const [user, setUser] = useState({"name": "Pete", "address": "Scarborough"});
 
   return (
     <UserContext.Provider value={user}>
-      <h1>{`Hello ${user}!`}</h1>
+      <h1>{`Hello ${user.name}!`}</h1>
       <Component1 />
     </UserContext.Provider>
   );
