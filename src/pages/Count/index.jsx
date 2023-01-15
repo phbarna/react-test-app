@@ -11,7 +11,7 @@ export default function Count() {
     <>
       <div>
       <div className="intro">
-        A count progam (beginner - demonstrates state as a simplest)
+        A count progam.  Beginner level - demonstrates state at its simplest
       </div>
         Count: {count}
         <button onClick={increment}>+</button>
