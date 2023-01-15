@@ -41,6 +41,9 @@ const Layout = () => {
                         <li>
                             <Link to="/tiktok">TickTok</Link>
                         </li>
+                        <li>
+                            <Link to="/tiktokclass">TickTokClass</Link>
+                        </li>
                     </ul>
                 </nav>
 

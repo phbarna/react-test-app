@@ -1,33 +1,30 @@
 export default function Various() {
-  function Car(props) {
-    return <p>I am a {props.brand}</p>;
-  }
 
-  function Garage() {
-    const cars = [
-      { id: 1, brand: 'Ford' },
-      { id: 2, brand: 'BMW' },
-      { id: 3, brand: 'Audi' }
-    ];
-    return (
-      <>
-        <h1>Who lives in my garage?</h1>
+  return (
+    <Parent />
+  )
+}
 
-        {cars.map((car) => <Car key={car.id} brand={car.brand} />)}
-
-      </>
-    );
-  }
+const Parent = () => {
+  const handleClick = () => {
+    console.log("parent click");
+  };
 
   return (
     <>
-      <h1>Various</h1>
-      <p>various React/css bits and bobs - page is changeable</p>
-      <hr></hr>
-      <>
-        <p>test</p>
-        <Garage />
-      </>
+     
+      <Child handleClick={handleClick} temp={69}/>
     </>
-  );
+  )
 }
+
+function Child(props) {
+  const handleClick= props.handleClick
+  return <button onClick={handleClick}>Apply </button>;
+}
+
+
+
+
+
+

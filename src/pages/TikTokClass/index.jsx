@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-export default function Tiktok() {
+export default function TikTokClass() {
     return (
         <>
-            tikTok using functional components
-            <div className="tiktok">
+            same as tikTok but uses classes instead of functional components
+            <div className='tiktok'>
                 <Game />
             </div>
-        </>
-    )
+        </>)
+
 }
 
 function Square(props) {
@@ -19,37 +19,39 @@ function Square(props) {
     );
 }
 
-function Board(props) {
-    function renderSquare(i) {
+class Board extends React.Component {
+    renderSquare(i) {
         return (
             <Square
-                value={props.squares[i]}
-                onClick={() => props.onClick(i)}
+                value={this.props.squares[i]}
+                onClick={() => this.props.onClick(i)}
             />
         );
     }
 
-    return (
-        <div>
-            <div className="board-row">
-                {renderSquare(0)}
-                {renderSquare(1)}
-                {renderSquare(2)}
+    render() {
+        return (
+            <div>
+                <div className="board-row">
+                    {this.renderSquare(0)}
+                    {this.renderSquare(1)}
+                    {this.renderSquare(2)}
+                </div>
+                <div className="board-row">
+                    {this.renderSquare(3)}
+                    {this.renderSquare(4)}
+                    {this.renderSquare(5)}
+                </div>
+                <div className="board-row">
+                    {this.renderSquare(6)}
+                    {this.renderSquare(7)}
+                    {this.renderSquare(8)}
+                </div>
             </div>
-            <div className="board-row">
-                {renderSquare(3)}
-                {renderSquare(4)}
-                {renderSquare(5)}
-            </div>
-            <div className="board-row">
-                {renderSquare(6)}
-                {renderSquare(7)}
-                {renderSquare(8)}
-            </div>
-        </div>
-    );
-
+        );
+    }
 }
+
 class Game extends React.Component {
     constructor(props) {
         super(props);
@@ -123,7 +125,7 @@ class Game extends React.Component {
                 </div>
                 <div className="game-info">
                     <div>{status}</div>
-                    <ol className="tiktok">{moves}</ol>
+                    <ol className='tiktok'>{moves}</ol>
                 </div>
             </div>
         );
