@@ -5,10 +5,17 @@ import ReactDOM from "react-dom/client";
 
 export default function Home() {
 
-  useEffect(() => 
-  {
+  useEffect(() => {
     console.log("home")
 
   });
-  return (<h1>Home</h1>);
+  return (
+    <>
+      <div className="intro">
+        The home page
+      </div>
+      <h1>Home</h1>
+    </>
+  )
+
 }

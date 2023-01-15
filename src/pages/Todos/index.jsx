@@ -1,5 +1,4 @@
 import { useState, useCallback } from "react";
-import ReactDOM from "react-dom/client";
 import Todos from "./todos.jsx";
 
 
@@ -10,13 +9,16 @@ export default function TodosParent() {
   const increment = () => {
     setCount((c) => c + 1);
   };
+  
   const addTodo = useCallback(() => {
     setTodos((t) => [...t, "New Todo"]);
-  }, [todos]);
+  }, []);
 
   return (
     <>
-    (uses callback)
+      <div className="intro">
+        Using callbacks demo (need to look at console.log for click)
+      </div>
       <Todos todos={todos} addTodo={addTodo} />
       <hr />
       <div>

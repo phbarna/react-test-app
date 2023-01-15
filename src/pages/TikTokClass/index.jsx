@@ -3,8 +3,10 @@ import React from 'react';
 export default function TikTokClass() {
     return (
         <>
-            same as tikTok but uses classes instead of functional components
-            <div className='tiktok'>
+            <div className="intro">
+                TikTok but uses old classes style
+            </div>
+            <div className="tiktok">
                 <Game />
             </div>
         </>)

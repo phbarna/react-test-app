@@ -10,6 +10,9 @@ export default function Count() {
   return (
     <>
       <div>
+      <div className="intro">
+        A count progam (beginner - demonstrates state as a simplest)
+      </div>
         Count: {count}
         <button onClick={increment}>+</button>
       </div>

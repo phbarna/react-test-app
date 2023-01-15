@@ -3,7 +3,9 @@ import React from 'react'
 export default function Tiktok() {
     return (
         <>
-            tikTok using functional components
+            <div className="intro">
+                Tiktok using functional components
+            </div>
             <div className="tiktok">
                 <Game />
             </div>

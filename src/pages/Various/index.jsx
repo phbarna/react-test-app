@@ -1,7 +1,13 @@
 export default function Various() {
 
   return (
-    <Parent />
+    <>
+      <div className="intro">
+        A component for messing around with (always under dev)
+      </div>
+      <Parent />
+    </>
+
   )
 }
 
@@ -12,14 +18,13 @@ const Parent = () => {
 
   return (
     <>
-     
-      <Child handleClick={handleClick} temp={69}/>
+      <Child handleClick={handleClick} temp={69} />
     </>
   )
 }
 
 function Child(props) {
-  const handleClick= props.handleClick
+  const handleClick = props.handleClick
   return <button onClick={handleClick}>Apply </button>;
 }
 

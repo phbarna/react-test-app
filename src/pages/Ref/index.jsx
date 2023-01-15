@@ -4,7 +4,10 @@ const Ref = () => {
 
   return (
     <>
-      this component uses useRef and forward ref
+      <div className="intro">
+        This component uses useRef and forward ref
+      </div>
+
       <FRParentInput />
     </>
   );
