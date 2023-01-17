@@ -77,8 +77,9 @@ function Game() {
             [2, 4, 6]
         ];
         for (let i = 0; i < lines.length; i++) {
-            const [a, b, c] = lines[i];
-            if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+            const [a, b, c] = lines[i]; // array destructuring
+            if (squares[a] && squares[a] === squares[b]
+                && squares[a] === squares[c]) {
                 return squares[a];
             }
         }
@@ -100,22 +101,21 @@ function Game() {
             {
                 history: history.concat([
                     {
-                        squares: squares
+                        squares
                     }
                 ]),
                 stepNumber: history.length,
                 xIsNext: !state.xIsNext
             }
-
         );
     }
 
-    function jumpTo(step) {
+    function jumpTo(stepNumber) {
         setState(
             {
-                history: history.slice(),
-                stepNumber: step,
-                xIsNext: (step % 2) === 0
+                history,
+                stepNumber,
+                xIsNext: (stepNumber % 2) === 0
             }
         )
     }
@@ -124,14 +124,14 @@ function Game() {
     const current = state.history[state.stepNumber];
     const winner = calculateWinner(current.squares);
 
-    const moves = history.map((step, move) => {
+    const moves = history.map((historyItem, stepNumber) => {
 
-        const desc = move ?
-            'Go to move #' + move :
+        const desc = stepNumber ? // 0 would a 'falsy' value
+            'Go to move #' + stepNumber :
             'Go to game start';
         return (
-            <li className="tiktok" key={move}>
-                <button onClick={() => jumpTo(move)}>{desc}</button>
+            <li className="tiktok" key={stepNumber}>
+                <button onClick={() => jumpTo(stepNumber)}>{desc}</button>
             </li>
         );
     });
@@ -139,7 +139,7 @@ function Game() {
     let status;
     if (winner) {
         status = "Winner: " + winner;
-    } else if (state.stepNumber == 9) {
+    } else if (state.stepNumber === 9) {
         status = "Game over - you're both losers";
     }
     else {

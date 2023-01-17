@@ -7,10 +7,7 @@ export default function Javasript() {
     })
 
     function run() {
-        let i = 1;
-        function theFunction(name, profession) {
-            console.log("My name is " + name + " and I am a " + profession + ".");
-        }
+
         // theFunction("John", "fireman");
         // theFunction.apply(undefined, ["Susan", "school teacher"]);
         // theFunction.call("Claude", "mathematician");
@@ -34,7 +31,6 @@ export default function Javasript() {
         borderWidth: "3px",
         borderStyle: "solid",
         borderColor: "black",
-        padding: "10px",
         fontFamily: "Arial"
     };
 
