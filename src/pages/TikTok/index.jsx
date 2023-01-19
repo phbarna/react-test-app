@@ -88,8 +88,8 @@ function Game() {
 
     function handleClick(i) {
         const history = state.history.slice(0, state.stepNumber + 1);
-        const current = history[history.length - 1];
-        const squares = current.squares.slice();
+
+        const squares = history[history.length - 1].squares.slice();
 
         if (calculateWinner(squares) || squares[i]) {
             return;
@@ -99,7 +99,7 @@ function Game() {
 
         setState(
             {
-                history: history.concat([
+                history: history.concat([ 
                     {
                         squares
                     }
@@ -121,8 +121,8 @@ function Game() {
     }
 
     const history = state.history;
-    const current = state.history[state.stepNumber];
-    const winner = calculateWinner(current.squares);
+
+    const winner = calculateWinner(state.history[state.stepNumber].squares);
 
     const moves = history.map((historyItem, stepNumber) => {
 
@@ -150,7 +150,7 @@ function Game() {
         <div className="game">
             <div className="game-board">
                 <Board
-                    squares={current.squares}
+                    squares={state.history[state.stepNumber].squares}
                     onClick={i => handleClick(i)}
                 />
             </div>
