@@ -12,6 +12,7 @@ import Reducer from './pages/Reducer'
 import ContextTest from './pages/ContextTest'
 import TikTok from './pages/TikTok'
 import TikTokClass from './pages/TikTokClass'
+import ChakraTest from './pages/ChakraTest'
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="todos" element={<TodosParent />} />
           <Route path="tiktok" element={<TikTok />} />
           <Route path="tiktokclass" element={<TikTokClass />} />
+          <Route path="chakratest" element={<ChakraTest />} />
         </Route>
       </Routes>
     </BrowserRouter>
