@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
 import Todos from "./todos.jsx";
+import { Button } from '@chakra-ui/react'
 
 
 export default function TodosParent() {
@@ -23,7 +24,7 @@ export default function TodosParent() {
       <hr />
       <div>
         Count: {count}
-        <button onClick={increment}>+</button>
+        <Button mb={6} margin="12px" colorScheme="teal" onClick={increment}>+</Button>
       </div>
     </>
   );

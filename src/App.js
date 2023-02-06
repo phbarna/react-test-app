@@ -13,9 +13,11 @@ import ContextTest from './pages/ContextTest'
 import TikTok from './pages/TikTok'
 import TikTokClass from './pages/TikTokClass'
 import ChakraTest from './pages/ChakraTest'
+import { ChakraProvider } from '@chakra-ui/react'
 
 export default function App() {
   return (
+    <ChakraProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -35,6 +37,7 @@ export default function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </ChakraProvider>
   );
 }
 

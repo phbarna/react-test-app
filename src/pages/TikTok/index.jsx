@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Button } from '@chakra-ui/react'
 
 export default function Tiktok() {
     return (
@@ -131,7 +132,7 @@ function Game() {
             'Go to game start';
         return (
             <li className="tiktok" key={stepNumber}>
-                <button onClick={() => jumpTo(stepNumber)}>{desc}</button>
+                <Button  margin="1px" colorScheme="teal" onClick={() => jumpTo(stepNumber)}>{desc}</Button>
             </li>
         );
     });

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Button } from '@chakra-ui/react'
 export default function Count() {
   const [count, setCount] = useState(0);
 
@@ -14,7 +14,7 @@ export default function Count() {
         A count progam.  Beginner level - demonstrates state at its simplest
       </div>
         Count: {count}
-        <button onClick={increment}>+</button>
+        <Button mb={6} margin="12px" colorScheme="teal" onClick={increment}>+</Button>
       </div>
     </>
   );

@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { Button } from '@chakra-ui/react'
 
 const Todos = ({ todos, addTodo }) => {
   console.log("child render");
@@ -8,7 +9,7 @@ const Todos = ({ todos, addTodo }) => {
       {todos.map((todo, index) => {
         return <p key={index}>{todo}</p>;
       })}
-      <button onClick={addTodo}>Add Todo</button>
+     <Button mb={6} margin="12px" colorScheme="teal" onClick={addTodo}>Add Todo</Button>
     </>
   );
 };

@@ -1,7 +1,6 @@
 
 
-import { useState, useEffect } from "react";
-import ReactDOM from "react-dom/client";
+import { useEffect } from "react";
 
 export default function Home() {
 

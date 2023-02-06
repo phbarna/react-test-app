@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+import { Button } from '@chakra-ui/react'
 
 export default function Reducer() {
   // First render will create the state, and it will
@@ -14,9 +15,9 @@ export default function Reducer() {
     <hr/>
       {sum}
 
-      <button onClick={() => dispatch(1)}>
+      <Button mb={6} margin="12px" colorScheme="teal" onClick={() => dispatch(1)}>
         Add 1
-      </button>
+      </Button>
     </>
   );
 }
