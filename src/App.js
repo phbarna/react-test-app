@@ -14,6 +14,7 @@ import TikTok from './pages/TikTok'
 import TikTokClass from './pages/TikTokClass'
 import ChakraTest from './pages/ChakraTest'
 import { ChakraProvider } from '@chakra-ui/react'
+import AsyncTest from './pages/AsyncTest'
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="tiktok" element={<TikTok />} />
           <Route path="tiktokclass" element={<TikTokClass />} />
           <Route path="chakratest" element={<ChakraTest />} />
+          <Route path="asynctest" element={<AsyncTest />} />
         </Route>
       </Routes>
     </BrowserRouter>

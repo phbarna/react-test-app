@@ -47,6 +47,9 @@ const Layout = () => {
                         <li>
                             <Link to="/chakratest">ChakraTest</Link>
                         </li>
+                        <li>
+                            <Link to="/asynctest">AsyncTest</Link>
+                        </li>
                     </ul>
                 </nav>
 
