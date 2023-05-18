@@ -25,6 +25,11 @@ li {
   text-align: center;
 }
 
+.error {
+  color: red;
+  font-weight: bold;
+}
+
 .center {
   border: 3px solid;
   text-align: left;
