@@ -39,7 +39,7 @@ export default function AsyncTest() {
             ))}
           </ol>
         ) : (
-          <div className="error">Cannot connect to server !</div>
+          <h1 className="error">Cannot connect to server !</h1>
         )}
       </div>
     </>

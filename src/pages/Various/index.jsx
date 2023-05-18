@@ -1,5 +1,4 @@
 export default function Various() {
-
   return (
     <>
       <div className="intro">
@@ -7,29 +6,31 @@ export default function Various() {
       </div>
       <Parent />
     </>
-
-  )
+  );
 }
 
 const Parent = () => {
   const handleClick = () => {
     console.log("parent click");
   };
-
+  let f = true;
   return (
     <>
-      <Child handleClick={handleClick} temp={69} />
+      <>
+        {f ? (
+          <>
+            true
+            <div>in div</div>
+          </>
+        ) : (
+          <>false</>
+        )}
+      </>
     </>
-  )
-}
+  );
+};
 
 function Child(props) {
-  const handleClick = props.handleClick
+  const handleClick = props.handleClick;
   return <button onClick={handleClick}>Apply </button>;
 }
-
-
-
-
-
-
