@@ -22,26 +22,32 @@ export default function AsyncTest() {
     fetchData();
   }, []);
 
+  // renders the data line by line in an ordered list
+  const renderData = () => {
+    return (
+      <ol>
+        {data.map((item) => (
+          <p key={item.id}>
+            {item.name} age:{item.age} gender:{item.gender} from {item.location}
+          </p>
+        ))}
+      </ol>
+    );
+  }
+
+  // cannot render data, so render an error
+  const renderError = () => {
+    return <h1 className="error">Cannot connect to server !</h1>;
+  }
+
   return (
     <>
       <div className="intro">
         Async example. Relies on having a separate server at
         192.168.1.91:1337/data
       </div>
-      <div>
-        {data ? (
-          <ol>
-            {data.map((item) => (
-              <p key={item.id}>
-                {item.name} age:{item.age} gender:{item.gender} from{" "}
-                {item.location}
-              </p>
-            ))}
-          </ol>
-        ) : (
-          <h1 className="error">Cannot connect to server !</h1>
-        )}
-      </div>
+
+      {data ? <>{renderData()}</> : <>{renderError()}</>}
     </>
   );
 }
