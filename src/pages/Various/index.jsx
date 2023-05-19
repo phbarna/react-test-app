@@ -9,23 +9,24 @@ export default function Various() {
   );
 }
 
+function test() {
+  const user = {
+    name: "pete",
+  };
+  console.log("i is", user.write.test());
+}
+
 const Parent = () => {
   const handleClick = () => {
     console.log("parent click");
   };
-  let f = true;
+  let f = 0;
+  let g = 1;
+
   return (
     <>
-      <>
-        {f ? (
-          <>
-            true
-            <div>in div</div>
-          </>
-        ) : (
-          <>false</>
-        )}
-      </>
+      {g}
+      hello
     </>
   );
 };
