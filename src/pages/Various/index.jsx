@@ -20,12 +20,12 @@ const Parent = () => {
   const handleClick = () => {
     console.log("parent click");
   };
-  let f = 0;
+  let f = 30;
   let g = 1;
 
   return (
     <>
-      {g}
+      {g+f}
       hello
     </>
   );

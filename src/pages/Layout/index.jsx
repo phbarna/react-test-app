@@ -50,6 +50,9 @@ const Layout = () => {
                         <li>
                             <Link to="/asynctest">AsyncTest</Link>
                         </li>
+                        <li>
+                            <Link to="/childtoparentstate">Child State</Link>
+                        </li>
                     </ul>
                 </nav>
 

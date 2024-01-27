@@ -22,18 +22,22 @@ export default function AsyncTest() {
     fetchData();
   }, []);
 
-  const headerStyle = {"text-decoration": "underline", "margin-bottom":  "20px", "margin-top":  "5px"};
+  const headerStyle = {
+    "text-decoration": "underline",
+    "margin-bottom": "20px",
+    "margin-top": "5px",
+  };
 
   // renders the data line by line in an ordered list
   const renderData = () => {
     return (
       <>
         <div style={headerStyle}>Data Returned OK</div>
-    
         <ol>
           {data.map((item) => (
             <div key={item.id}>
-              {item.name} age:{item.age} gender:{item.gender} from {item.location}
+              {item.name} age:{item.age} gender:{item.gender} from{" "}
+              {item.location}
             </div>
           ))}
         </ol>
