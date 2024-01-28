@@ -6,7 +6,6 @@ import Count from "./pages/Count";
 import NoPage from "./pages/NoPage";
 import AutoCount from "./pages/AutoCount";
 import TodosParent from "./pages/Todos";
-import Javasript from "./pages/Javascript";
 import Ref from "./pages/Ref";
 import Reducer from './pages/Reducer'
 import ContextTest from './pages/ContextTest'
@@ -25,7 +24,6 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="various" element={<Various />} />
-          <Route path="javascript" element={<Javasript />} />
           <Route path="count" element={<Count />} />
           <Route path="*" element={<NoPage />} />
           <Route path="autocount" element={<AutoCount />} />

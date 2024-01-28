@@ -5,7 +5,7 @@ export default function FRParentInput() {
 
     const [count, setCount] = useState(0);
 
-    const inputRef = useRef();
+    const inputRef = useRef(null);
 
     useEffect(() => {
         clickHandler();
@@ -13,7 +13,7 @@ export default function FRParentInput() {
 
     function clickHandler() {
         inputRef.current.focus();
-        inputRef.current.value = '';
+        inputRef.current.value = 'a';
         setCount(0)
     }
 
