@@ -19,11 +19,13 @@
     "tailwindcss": "^3.4.1",
     "web-vitals": "^2.1.4"
   },
+  
   "husky": {
-    "hooks": {
-      "pre-commit": "exit 1"
-    }
-  },
+     "hooks": {
+       "pre-push": "npm run lint && npm test"
+     }
+   },
+  
   "scripts": {
     "start": "react-scripts start",
     "dev": "react-scripts start",
