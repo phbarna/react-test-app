@@ -1,4 +1,2 @@
-
 #!/bin/bash 
-
 if git status --porcelain | grep -q '?? src/'; then echo 'Error: there are untracked files in your source folder'; exit 1; fi
