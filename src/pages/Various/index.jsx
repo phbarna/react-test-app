@@ -1,49 +1,40 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+// CommentForm.js
+import React from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 
-function Various() {
-  const { register, handleSubmit, watch, trigger, formState: { errors } } = useForm(); // Destructuring errors from formState
-  const password = watch('password', ''); // Watching the 'password' input field
+const Various = () => {
+
+  const commentSchema = z.object({
+    comment: z.string().min(1, { message: "Comment cannot be empty" })
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(commentSchema),
+  });
 
   const onSubmit = (data) => {
     console.log(data);
+    // Handle your submit logic here
   };
 
-  // Function to validate the confirmation password field
-  const validateConfirmPassword = (value) => {
-    return value === password || 'Passwords do not match';
-  };
 
-  // Function to validate the password field
-  const validatePassword = async (value) => {
-    // Perform asynchronous validation
-    const isValid = await new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(value.length >= 8); // Password should be at least 8 characters long
-      }, 1000);
-    });
-    return isValid || 'Password must be at least 8 characters long';
-  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <label>Password</label>
-      <input type="password" {...register('password', { validate: validatePassword })} />
-      <p>{errors.password && errors.password.message}</p>
-
-      <label>Confirm Password</label>
-      <input
-        type="password"
-        {...register('confirmPassword', { validate: validateConfirmPassword })}
-        onChange={() => {
-          trigger('confirmPassword'); // Triggering validation for confirmPassword field on change
-        }}
-      />
-      <p>{errors.confirmPassword && errors.confirmPassword.message}</p>
-
-      <button type="submit">Submit</button>
+      <div>
+        <label htmlFor="comment">Comment:</label>
+        <textarea id="comment" {...register("comment")} />
+        {errors.comment && <p>{errors.comment.message}</p>}
+      </div>
+      <button type="submit">Save</button>
     </form>
   );
-}
+};
 
 export default Various;
